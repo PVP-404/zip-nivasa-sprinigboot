@@ -37,6 +37,7 @@ public class SecurityConfig {
                         .requestMatchers("/uploads/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/pgs/**", "/api/mess/all", "/api/mess/*").permitAll()
                         .requestMatchers("/api/mess-owner/**").permitAll()
+                        .requestMatchers("/api/laundry/**").permitAll()
                         // any other API endpoint requires JWT
                         .requestMatchers("/api/**").authenticated()
                         .anyRequest().permitAll()
